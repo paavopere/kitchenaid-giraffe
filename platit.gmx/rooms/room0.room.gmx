@@ -88,6 +88,7 @@
     <instance objName="o_block20" x="600" y="340" name="inst_842BE7E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ctrl_universal" x="0" y="0" name="inst_12323F04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ctrl_gameplay" x="20" y="0" name="inst_66D463E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_bowl" x="520" y="260" name="inst_380A8F3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
