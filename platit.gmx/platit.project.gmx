@@ -13,6 +13,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\o_ctrl_universal</object>
     <object>objects\o_block20</object>
     <object>objects\o_kitchenaid</object>
   </objects>
