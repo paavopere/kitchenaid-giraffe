@@ -5,90 +5,24 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>o_controllable_walking</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Set a bunch of constants
-self.gravity = 1
-self.max_speed = 10
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if speed &gt;= max_speed {
-    speed = max_speed
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="o_block20">
-      <action>
-        <libid>1</libid>
-        <id>116</id>
+        <id>604</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move_contact</functionname>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>270</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -105,7 +39,58 @@ self.max_speed = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("speed: " + string(self.speed))
+            <string>/// Initialize
+
+// (quasi-)constants
+self.walk_speed = 8
+self.jump_speed = 15
+self.double_jump_animation_length = 20
+
+// variables
+self.facing = 1
+self.has_bowl = false
+self.double_jump_active = true
+self.double_jump_animation = false
+
+// set self as active
+o_ctrl_gameplay.active_controllable = self
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var rotation, subimage;
+
+rotation = 0;
+if self.double_jump_animation {
+    rotation = 360 * self.double_jump_direction 
+        * (alarm[0] / self.double_jump_animation_length);
+}
+
+subimage = 0;
+if self.has_bowl {
+    subimage = 1;
+}
+
+draw_sprite_ext(self.sprite_index, subimage, x, y,
+                1 * self.facing, 1, rotation, -1, 1);
 </string>
           </argument>
         </arguments>

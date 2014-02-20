@@ -9,13 +9,33 @@
     <sprite>sprites\spr_kitchenaid</sprite>
     <sprite>sprites\spr_kitchenaid_animation</sprite>
     <sprite>sprites\spr_block20</sprite>
+    <sprite>sprites\spr_bowl</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\walk_left.gml</script>
+    <script>scripts\walk_right.gml</script>
+    <script>scripts\jump.gml</script>
+    <script>scripts\free_jump.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\o_ctrl_universal</object>
-    <object>objects\o_block20</object>
-    <object>objects\o_kitchenaid</object>
+    <objects name="controllables">
+      <object>objects\o_controllable_walking</object>
+      <object>objects\o_kitchenaid</object>
+    </objects>
+    <objects name="controllers">
+      <object>objects\o_ctrl_universal</object>
+      <object>objects\o_ctrl_gameplay</object>
+    </objects>
+    <objects name="blocks">
+      <object>objects\o_parent_block</object>
+      <object>objects\o_block20</object>
+    </objects>
+    <object>objects\object4</object>
+    <object>objects\o_pickable_floating</object>
+    <object>objects\o_bowl</object>
+    <object>objects\object9</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
