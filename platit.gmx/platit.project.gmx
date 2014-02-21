@@ -8,10 +8,16 @@
   <sprites name="sprites">
     <sprite>sprites\spr_kitchenaid</sprite>
     <sprite>sprites\spr_kitchenaid_animation</sprite>
-    <sprite>sprites\spr_block20</sprite>
     <sprite>sprites\spr_bowl</sprite>
+    <sprite>sprites\spr_block_20</sprite>
+    <sprite>sprites\spr_block_40</sprite>
+    <sprite>sprites\spr_block_160</sprite>
+    <sprite>sprites\spr_cloud</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_ground_tiles_20</background>
+    <background>background\bg_ground_tiles_40</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path_float</path>
   </paths>
@@ -29,16 +35,19 @@
     <objects name="controllers">
       <object>objects\o_ctrl_universal</object>
       <object>objects\o_ctrl_gameplay</object>
+      <object>objects\o_ctrl_clouds</object>
     </objects>
     <objects name="blocks">
       <object>objects\o_parent_block</object>
-      <object>objects\o_block20</object>
+      <object>objects\o_block_20</object>
+      <object>objects\o_block_40</object>
+      <object>objects\o_block_160</object>
     </objects>
     <objects name="pickables">
       <object>objects\o_pickable_floating</object>
       <object>objects\o_bowl</object>
     </objects>
-    <object>objects\object4</object>
+    <object>objects\o_cloud</object>
     <object>objects\object9</object>
   </objects>
   <rooms name="rooms">
