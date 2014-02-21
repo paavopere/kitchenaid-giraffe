@@ -17,6 +17,7 @@
   <backgrounds name="background">
     <background>background\bg_ground_tiles_20</background>
     <background>background\bg_ground_tiles_40</background>
+    <background>background\bg_ground_tiles_160</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_float</path>
