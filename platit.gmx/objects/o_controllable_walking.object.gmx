@@ -110,6 +110,11 @@ if place_free(x, y + 1) {
 }
 
 // keys
+if keyboard_check(self.up_key) and (o_ctrl_gameplay.active_controllable == self.id
+                                    or self.always_controllable) {
+    // jumped: if they jumped during this very step
+    jumped = jump(self.jump_speed);
+}
 if keyboard_check(self.left_key) and (o_ctrl_gameplay.active_controllable == self.id 
                                       or self.always_controllable) {
     walk_left(self.walk_speed);
@@ -117,11 +122,6 @@ if keyboard_check(self.left_key) and (o_ctrl_gameplay.active_controllable == sel
 if keyboard_check(self.right_key) and (o_ctrl_gameplay.active_controllable == self.id
                                        or self.always_controllable) {
     walk_right(self.walk_speed);
-}
-if keyboard_check(self.up_key) and (o_ctrl_gameplay.active_controllable == self.id
-                                    or self.always_controllable) {
-    // jumped: if they jumped during this very step
-    jumped = jump(self.jump_speed);
 }
 if self.double_jump_active 
     and keyboard_check_pressed(self.up_key) 

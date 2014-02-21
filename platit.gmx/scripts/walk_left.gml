@@ -3,8 +3,12 @@
 var walk_speed;
 walk_speed = argument[0];
 
-if not place_free(x - walk_speed, y) {
-    move_contact_solid(180, walk_speed);
-} else {
-    x -= walk_speed;
+i = 0
+while place_free(x - i, y) {
+    i += 1
+    if i > walk_speed {
+        break;
+    }
 }
+x -= i-1
+

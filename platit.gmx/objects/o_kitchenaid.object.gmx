@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>o_controllable_walking</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>mask_kitchenaid</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
