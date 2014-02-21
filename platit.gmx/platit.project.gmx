@@ -32,6 +32,10 @@
     <script>scripts\jump.gml</script>
     <script>scripts\free_jump.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\f_big</font>
+    <font>fonts\f_regular</font>
+  </fonts>
   <objects name="objects">
     <objects name="controllables">
       <object>objects\o_controllable_walking</object>
@@ -43,6 +47,8 @@
       <object>objects\o_ctrl_gameplay</object>
       <object>objects\o_ctrl_clouds</object>
       <object>objects\o_ctrl_gui</object>
+      <object>objects\o_ctrl_start_screen</object>
+      <object>objects\o_ctrl_victory_screen</object>
     </objects>
     <objects name="blocks">
       <object>objects\o_parent_block</object>
@@ -61,7 +67,9 @@
     <object>objects\object9</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\r_start</room>
     <room>rooms\room0</room>
+    <room>rooms\r_victory</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

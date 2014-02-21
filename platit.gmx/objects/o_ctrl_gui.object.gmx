@@ -25,14 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i, xx, yy;
+            <string>var i, xx, yy, subimage;
 
 xx = 10;
 yy = 10;
-for (i = 0; i &lt; o_ctrl_gameplay.apples_picked; i+=1) {
-    draw_sprite(spr_apple, 1, xx + i*20, yy);
+for (i = 0; i &lt; instance_number(o_apple_red) + instance_number(o_apple_green); i+=1) {
+    subimage = 0;
+    if i &gt;= instance_number(o_apple_red) {
+        subimage = 1;
+    }
+    draw_sprite(spr_apple, subimage, xx + i*20, yy);
 }
-
+draw_set_font(f_regular);
+draw_set_halign(fa_left);
+draw_text_ext_transformed(xx,yy+20,"Time: " + string(o_ctrl_gameplay.time),0,800,0.5,0.5,0);
 </string>
           </argument>
         </arguments>
