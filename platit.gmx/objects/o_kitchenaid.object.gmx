@@ -51,7 +51,6 @@ self.left_key = ord('A');
 self.right_key = ord('D');
 self.always_controllable = true;
 self.double_jump_active = true;
-self.apples_picked = 0;
 
 // variables
 self.facing = 1;
@@ -125,7 +124,7 @@ self.mix_animation = false;
             <kind>1</kind>
             <string>if self.mix_animation {
     with other instance_destroy();
-    self.apples_picked += 1;
+    o_ctrl_gameplay.apples_picked += 1;
 }
 
 </string>

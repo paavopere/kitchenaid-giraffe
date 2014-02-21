@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///init
 self.active_controllable = 0;
+self.apples_picked = 0;
 </string>
           </argument>
         </arguments>
