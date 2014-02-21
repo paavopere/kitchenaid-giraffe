@@ -13,6 +13,8 @@
     <sprite>sprites\spr_block_40</sprite>
     <sprite>sprites\spr_block_160</sprite>
     <sprite>sprites\spr_cloud</sprite>
+    <sprite>sprites\spr_giraffe</sprite>
+    <sprite>sprites\spr_giraffe_animation</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground_tiles_20</background>
@@ -32,6 +34,7 @@
     <objects name="controllables">
       <object>objects\o_controllable_walking</object>
       <object>objects\o_kitchenaid</object>
+      <object>objects\o_giraffe</object>
     </objects>
     <objects name="controllers">
       <object>objects\o_ctrl_universal</object>
@@ -47,6 +50,7 @@
     <objects name="pickables">
       <object>objects\o_pickable_floating</object>
       <object>objects\o_bowl</object>
+      <object>objects\object14</object>
     </objects>
     <object>objects\o_cloud</object>
     <object>objects\object9</object>

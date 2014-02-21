@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = -0.5;
+            <string>hspeed = -1;
 self.scale = 1 + random(2);
 self.subimage = ceil(random(3));
 </string>
@@ -33,27 +33,7 @@ self.subimage = ceil(random(3));
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>112</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_wrap</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -70,9 +50,13 @@ self.subimage = ceil(random(3));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.y = random(room_height);
-self.scale = 1 + random(2);
-self.subimage = ceil(random(3));
+            <string>///wrap
+if self.x &lt; -100 {
+    x = room_width + 100;
+    self.y = random(room_height);
+    self.scale = 1 + random(2.0);
+    self.subimage = floor(random(4.0));
+}
 </string>
           </argument>
         </arguments>

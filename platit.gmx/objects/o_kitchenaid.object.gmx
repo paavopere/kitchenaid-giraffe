@@ -42,20 +42,24 @@
             <string>/// Initialize
 
 // (quasi-)constants
-self.walk_speed = 8;
+self.walk_speed = 6;
 self.jump_speed = 15;
 self.double_jump_animation_length = 20;
 self.mix_animation_length = 20;
+self.up_key = ord('W');
+self.left_key = ord('A');
+self.right_key = ord('D');
+self.always_controllable = true;
+self.double_jump_active = true;
 
 // variables
 self.facing = 1;
 self.has_bowl = false;
-self.double_jump_active = true;
 self.double_jump_animation = false;
 self.mix_animation = false;
 
 // set self as active
-o_ctrl_gameplay.active_controllable = self;
+o_ctrl_gameplay.active_controllable = self.id;
 </string>
           </argument>
         </arguments>
@@ -83,6 +87,22 @@ self.mix_animation = false;
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="o_bowl">
@@ -201,7 +221,7 @@ draw_sprite_ext(sprite, subimage, x, y,
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="77">
+    <event eventtype="9" enumb="83">
       <action>
         <libid>1</libid>
         <id>603</id>
